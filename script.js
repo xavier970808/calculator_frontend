@@ -63,7 +63,7 @@ function plot() {
             });
         }
     })
-    .catch(err => {
+    .catch(err => { 
         document.getElementById("plot_error").textContent = "伺服器連線錯誤：" + err;
     });
 }
