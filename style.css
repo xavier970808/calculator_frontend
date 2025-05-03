@@ -6,6 +6,8 @@ body {
 
 input, button, select {
     margin: 5px;
+    height: auto;
+    width: 100%;
 }
 
 .error {
