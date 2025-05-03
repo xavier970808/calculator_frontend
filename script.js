@@ -6,7 +6,7 @@ function calculate() {
         angle_mode: document.getElementById("calc_angle_mode").value
     };
 
-    fetch("http://127.0.0.1:5000/calculate", {
+    fetch("https://calculator-frontend-c04.pages.dev/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
@@ -40,7 +40,7 @@ function plot() {
         show_points: document.getElementById("show_points").checked
     };
 
-    fetch("http://127.0.0.1:5000/plot", {
+    fetch("https://calculator-frontend-c04.pages.dev/plot", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
