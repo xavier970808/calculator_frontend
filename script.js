@@ -6,7 +6,7 @@ function calculate() {
         angle_mode: document.getElementById("calc_angle_mode").value
     };
 
-    fetch("https://calculator-frontend-c04.pages.dev/", {
+    fetch("https://calculator-gj6q.onrender.com", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
@@ -40,7 +40,7 @@ function plot() {
         show_points: document.getElementById("show_points").checked
     };
 
-    fetch("https://calculator-frontend-c04.pages.dev/plot", {
+    fetch("https://calculator-gj6q.onrender.com/plot", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
@@ -67,3 +67,11 @@ function plot() {
         document.getElementById("plot_error").textContent = "伺服器連線錯誤：" + err;
     });
 }
+
+const API_BASE = 'https://calculator-gj6q.onrender.com';
+
+fetch(`${API_BASE}/calculate`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ expression, angle_mode })
+});
